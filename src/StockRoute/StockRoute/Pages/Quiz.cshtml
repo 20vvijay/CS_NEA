@@ -1,0 +1,31 @@
+﻿@page
+@model StockRoute.Pages.QuizModel
+@{
+    
+}
+
+<h2 id="timer">Haha noob you got played!!</h2>
+<button id="startButton" onclick="startTimer()">Weird Button?</button>
+
+<p></p>
+
+<script>
+function startTimer()
+    {
+        let timeLeft = 5;
+        const timer = setInterval(function() {
+            document.getElementById("startButton").innerHTML = "...";
+            document.getElementById("timer").innerHTML = timeLeft;
+            timeLeft --;
+        
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                document.getElementById("timer").innerHTML = "<em>Jk, welcome to the DAILY QUIZ!</em>";
+
+                document.getElementById("startButton").disabled = true;
+                document.getElementById("startButton").innerHTML = "";
+            }
+        }, 1000);
+
+    }
+</script>
