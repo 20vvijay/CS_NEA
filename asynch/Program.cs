@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using System.Text;
 
 namespace asynch
 {
@@ -29,12 +30,18 @@ namespace asynch
             var dateTime = DateTime.Now;
             var fileName = $"TextFile{dateTime:yyyyMMddHHmmss}.txt";
             string filePath = Path.Combine(Environment.CurrentDirectory, fileName);
-            using var streamWriter = File.AppendText(filePath);
+            // using var streamWriter = File.AppendText(filePath);
+            // File.AppendAllText(filePath, "");
+            StringBuilder sb = new StringBuilder();
             for (int i = 0; i < n; i++)
             {
-                streamWriter.WriteLine((char)('A' + (i % 26)));
-                streamWriter.WriteLine(i);
+                sb.Append(((char)('A' + (i % 26))).ToString());
+                sb.Append(i.ToString());
             }
+
+            // immutable: cannot be modified after creation
+            // mutable: can be modified after creation
+            File.AppendAllText(filePath, sb.ToString());
 
             Console.WriteLine("Finished writing to file.");
             return filePath;
@@ -45,10 +52,10 @@ namespace asynch
            using var streamReader = new StreamReader(filePath);
            string? line = streamReader.ReadLine();
            while (line != null)
-            {
-                Console.WriteLine(line);
-                line = streamReader.ReadLine();
-            }
+           {
+               Console.WriteLine(line);
+               line = streamReader.ReadLine();
+           }
         }
 
     }
