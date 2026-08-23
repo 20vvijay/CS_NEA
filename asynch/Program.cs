@@ -16,15 +16,19 @@ namespace asynch
                 // throwException(new ArgumentException("Invalid input. Please enter a valid number."));
                 
             }
-            var filePath = RepeatAlphabet(numLetters);
-            Console.WriteLine("Finished writing to file.");
-            Console.WriteLine($"Reading from file: {filePath}");
+            var (filePath, task) = RepeatAlphabet(numLetters);
+            while (!task.IsCompleted)
+            {
+                Console.WriteLine("Waiting for the file writing to complete...");
+                Thread.Sleep(1000); // Wait for 1 second before checking again
+            }
             ReadingFromFile(filePath);
-            Console.WriteLine("Finished reading from file.");
+            
+            Console.ReadLine();
             return 0;
         }
 
-        static string RepeatAlphabet(int n)
+        static (string, Task) RepeatAlphabet(int n)
         {
             Console.WriteLine("Writing to file...");
             var dateTime = DateTime.Now;
@@ -41,21 +45,37 @@ namespace asynch
 
             // immutable: cannot be modified after creation
             // mutable: can be modified after creation
-            File.AppendAllText(filePath, sb.ToString());
+            
+            var task = File.AppendAllTextAsync(filePath, sb.ToString());
+            
 
             Console.WriteLine("Finished writing to file.");
-            return filePath;
+            return (filePath, task);
         }
 
         static void ReadingFromFile(string filePath)
         {
-           using var streamReader = new StreamReader(filePath);
-           string? line = streamReader.ReadLine();
-           while (line != null)
-           {
-               Console.WriteLine(line);
-               line = streamReader.ReadLine();
-           }
+            Console.WriteLine($"Reading from file: {filePath}");
+            
+            try
+            {
+                
+                using var streamReader = new StreamReader(filePath);
+                string? line = streamReader.ReadLine();
+                while (line != null)
+                {
+                    Console.WriteLine(line);
+                    line = streamReader.ReadLine();
+                }
+                Console.WriteLine("Finished reading from file.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while reading from the file: {ex.Message}");
+                Console.WriteLine(ex.ToString());
+            }
+           
+           
         }
 
     }
