@@ -4,14 +4,21 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<form asp-page-handler="Login" method="post">
+    Username: <input id="Username" type="text" asp-for="Username" />
     
-    <p><strong>Click here to access our <h1><a href="https://localhost:7023/Quiz">DAILY QUIZ</a></h1></strong></p>
-</div>
+    Password: <input id="Password" type="password" asp-for="Password" />
+
+    <input id="btnSubmit" type="submit" value="submit" onkeydown="EnterKeyPress(event)"/>
+</form>
+
 
 <script type="text/javascript">
     console.log("Hello from Index.cshtml");
+    function EnterKeyPress(event) {
+        if (event.key === "Enter") {
+            document.getElementById("btnSubmit").click();
+        }
+    }
 </script>
 

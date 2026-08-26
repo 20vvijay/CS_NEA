@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.9.12112.369 stable
+VisualStudioVersion = 18.9.12112.369
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockRoute", "src\StockRoute\StockRoute\StockRoute.csproj", "{D78915D8-A1C4-72CB-2799-6B880EA235B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asynch", "asynch\asynch.csproj", "{745EF617-BC43-4E53-89FA-3597764A81C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockRoute.Models", "src\StockRoute.Models\StockRoute.Models.csproj", "{913B2718-8B57-44C1-879B-DEFC88314D51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D78915D8-A1C4-72CB-2799-6B880EA235B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D78915D8-A1C4-72CB-2799-6B880EA235B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D78915D8-A1C4-72CB-2799-6B880EA235B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{745EF617-BC43-4E53-89FA-3597764A81C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{745EF617-BC43-4E53-89FA-3597764A81C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{745EF617-BC43-4E53-89FA-3597764A81C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{745EF617-BC43-4E53-89FA-3597764A81C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{913B2718-8B57-44C1-879B-DEFC88314D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{913B2718-8B57-44C1-879B-DEFC88314D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{913B2718-8B57-44C1-879B-DEFC88314D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{913B2718-8B57-44C1-879B-DEFC88314D51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

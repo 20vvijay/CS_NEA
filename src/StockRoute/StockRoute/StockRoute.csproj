@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\StockRoute.Models\StockRoute.Models.csproj" />
+  </ItemGroup>
+
 </Project>
