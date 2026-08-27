@@ -2,6 +2,7 @@ using System.Security;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using StockRoute.Models;
 
 namespace StockRoute.Pages
 {
@@ -17,6 +18,7 @@ namespace StockRoute.Pages
 
         public void OnPostLogin()
         {
+            var login = new StockRoute.Models.Login("", "");
             var hasher = new PasswordHasher<object>();
 
             string passwordHash = hasher.HashPassword(null, this.Password);

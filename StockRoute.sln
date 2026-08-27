@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockRoute", "src\StockRout
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockRoute.Models", "src\StockRoute.Models\StockRoute.Models.csproj", "{913B2718-8B57-44C1-879B-DEFC88314D51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockRoute.Models.Tests", "tests\StockRoute.Models.Tests\StockRoute.Models.Tests.csproj", "{1AEB47D6-C0CA-4617-9CFB-8B766916AA01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockRoute.Tests", "tests\StockRoute.Tests\StockRoute.Tests.csproj", "{03AC55C8-564D-4293-A3DD-ABE9D3CAAB02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{913B2718-8B57-44C1-879B-DEFC88314D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{913B2718-8B57-44C1-879B-DEFC88314D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{913B2718-8B57-44C1-879B-DEFC88314D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AEB47D6-C0CA-4617-9CFB-8B766916AA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AEB47D6-C0CA-4617-9CFB-8B766916AA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AEB47D6-C0CA-4617-9CFB-8B766916AA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AEB47D6-C0CA-4617-9CFB-8B766916AA01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03AC55C8-564D-4293-A3DD-ABE9D3CAAB02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03AC55C8-564D-4293-A3DD-ABE9D3CAAB02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03AC55C8-564D-4293-A3DD-ABE9D3CAAB02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03AC55C8-564D-4293-A3DD-ABE9D3CAAB02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
