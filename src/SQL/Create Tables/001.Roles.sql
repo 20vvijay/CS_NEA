@@ -1,5 +1,5 @@
 CREATE Table Roles
 (
-roleId int PRIMARY KEY,
+roleId int IDENTITY(1,1) PRIMARY KEY,
 roleName varchar(45)
 );
