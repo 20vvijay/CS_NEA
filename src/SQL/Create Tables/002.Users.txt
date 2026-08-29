@@ -1,0 +1,10 @@
+CREATE Table Users
+(
+userId uuid PRIMARY KEY,
+username varchar(30),
+passwordHash varchar(30),
+salt varchar(30),
+isActive boolean,
+roleId int
+FOREIGN KEY (roleId) REFERENCES Roles(roleId)Table 
+);
