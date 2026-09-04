@@ -9,13 +9,13 @@
     
     Password: <input id="Password" type="password" asp-for="Password" />
 
-    <input id="btnSubmit" type="submit" value="submit" onkeydown="EnterKeyPress(event)"/>
+    <input id="btnSubmit" type="submit" value="submit" onkeydown="enterKeyPress(event)"/>
 </form>
 
 
-<script type="text/javascript">
+<script type="text/ecmascript"> 
     console.log("Hello from Index.cshtml");
-    function EnterKeyPress(event) {
+    function enterKeyPress(event) {
         if (event.key === "Enter") {
             document.getElementById("btnSubmit").click();
         }
